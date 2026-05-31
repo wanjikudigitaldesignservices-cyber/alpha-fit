@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Alpha Fit | Strength & Conditioning CrossFit Box Nairobi</title>
+    <meta name="description" content="Alpha Fit is a raw, community-driven CrossFit box in Nairobi. Join our intense strength and conditioning programs to build raw power and endurance.">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar"><div class="nav-container">
+        <a href="#home" class="nav-logo">ALPHA <span>FIT</span></a>
+        <ul class="nav-links" id="navLinks"><li><a href="#home" class="nav-link active">Home</a></li><li><a href="#wods" class="nav-link">WODs</a></li><li><a href="#memberships" class="nav-link">Pricing</a></li><li><a href="#dropin" class="nav-link">Drop-In</a></li></ul>
+        <a href="#dropin" class="nav-cta">Book a Drop-In</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div></nav>
+
+    <header id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Forging Elite Fitness in Nairobi</span>
+            <h1>NO MACHINES.<br>JUST <span class="accent">YOU.</span></h1>
+            <p class="hero-sub">Welcome to Alpha Fit. We use barbells, kettlebells, and bodyweight to build functional strength and raw power.</p>
+            <div class="hero-actions">
+                <a href="#memberships" class="btn btn-primary">Join the Box</a>
+                <a href="#wods" class="btn btn-outline">See Programs</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="wods" class="section dark-section">
+        <div class="container">
+            <div class="section-header"><h2>OUR CLASSES</h2><p>High-intensity functional training designed for all levels.</p></div>
+            <div class="wod-grid">
+                <div class="wod-card">
+                    <div class="wod-icon">🏋️</div>
+                    <h3>WOD (Workout of the Day)</h3>
+                    <p>Our core 60-minute class combining gymnastics, olympic lifting, and cardio. Constantly varied, high intensity.</p>
+                    <button class="btn-text" onclick="bookSvc('WOD Class')">Book Session >></button>
+                </div>
+                <div class="wod-card featured">
+                    <div class="wod-icon">💪</div>
+                    <h3>Strength Biased</h3>
+                    <p>A slower-paced class focused entirely on heavy compound lifts: Squats, Deadlifts, and Presses to build absolute strength.</p>
+                    <button class="btn-text" onclick="bookSvc('Strength Class')">Book Session >></button>
+                </div>
+                <div class="wod-card">
+                    <div class="wod-icon">🏃</div>
+                    <h3>Engine Builder</h3>
+                    <p>No heavy barbells. 100% aerobic capacity building using rowers, air bikes, running, and light kettlebells.</p>
+                    <button class="btn-text" onclick="bookSvc('Engine Builder')">Book Session >></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner-grid">
+                <div class="banner-text"><h2>THE COMMUNITY <span class="accent">IS THE CORE</span></h2><p>At Alpha Fit, you don't just pay for access to equipment. You pay for world-class coaching and a community that will push you through the last rep.</p></div>
+                <div class="banner-stats">
+                    <div class="stat"><span class="stat-num">5+</span><span class="stat-text">Level 2 Coaches</span></div>
+                    <div class="stat"><span class="stat-num">300+</span><span class="stat-text">Active Athletes</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="memberships" class="section pricing-section">
+        <div class="container">
+            <div class="section-header"><h2>PRICING</h2><p>No contracts. Cancel anytime.</p></div>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>3 Days/Week</h3>
+                    <div class="price">Kes 9,000<span> /mo</span></div>
+                    <ul class="price-list">
+                        <li>Access to 3 WODs per week</li>
+                        <li>Open Gym Access</li>
+                        <li>Nutrition Coaching App</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full" onclick="bookSvc('3 Days/Week Membership')">Select Plan</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Unlimited</h3>
+                    <div class="price">Kes 13,000<span> /mo</span></div>
+                    <ul class="price-list">
+                        <li>Unlimited WODs</li>
+                        <li>Unlimited Specialty Classes</li>
+                        <li>24/7 Open Gym Access</li>
+                        <li>Nutrition Coaching App</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" onclick="bookSvc('Unlimited Membership')">Select Plan</button>
+                </div>
+                <div class="price-card">
+                    <h3>10-Class Pass</h3>
+                    <div class="price">Kes 10,000<span> /pack</span></div>
+                    <ul class="price-list">
+                        <li>Valid for 3 months</li>
+                        <li>Access to any class</li>
+                        <li>Great for travelers</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full" onclick="bookSvc('10-Class Pass')">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dropin" class="section dropin-section">
+        <div class="container"><div class="dropin-box">
+            <div class="dropin-header"><h2>BOOK YOUR CLASS</h2><p>Sign up for a membership or schedule a single drop-in session.</p></div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row"><div class="form-group"><label>Athlete Name</label><input type="text" name="name" required></div><div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required></div></div>
+                <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+                <div class="form-row"><div class="form-group"><label>Class / Membership</label><select name="service" id="svcSelect" required><option value="">Select Option</option><option>Drop-In (Kes 1,500)</option><option>WOD Class</option><option>Strength Class</option><option>Engine Builder</option><option>3 Days/Week Membership</option><option>Unlimited Membership</option><option>10-Class Pass</option></select></div><div class="form-group"><label>Date</label><input type="date" name="date" required></div></div>
+                <div class="form-group"><label>CrossFit Experience Level</label><select name="experience"><option>Beginner (Never done CF)</option><option>Intermediate (Know the lifts)</option><option>Advanced (Rx most workouts)</option></select></div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+            </form>
+        </div></div>
+    </section>
+
+    <footer class="footer"><div class="container">
+        <div class="f-grid">
+            <div class="f-info"><a href="#home" class="nav-logo">ALPHA <span>FIT</span></a><p>The premier strength and conditioning facility in Nairobi.</p></div>
+            <div class="f-contact"><h4>Contact</h4><p>Industrial Area, Nairobi</p><p>Call: +254 700 999 888</p></div>
+        </div>
+        <div class="f-bottom"><p>© 2024 Alpha Fit. All rights reserved.</p><a href="admin.html">Coach Portal</a></div>
+    </div></footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body></html>
